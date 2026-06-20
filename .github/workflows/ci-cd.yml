@@ -1,0 +1,84 @@
+name: CI/CD - Static Website
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: Validate HTML/CSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check HTML exists
+        run: |
+          if [ ! -f index.html ]; then
+            echo "index.html not found in repo root"
+            exit 1
+          fi
+
+      - name: Install htmlhint and stylelint
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard
+
+      - name: Lint HTML
+        run: |
+          htmlhint "**/*.html"
+
+      - name: Create temporary stylelint config
+        run: |
+          cat > .stylelintrc.json <<'EOF'
+          {
+            "extends": "stylelint-config-standard"
+          }
+          EOF
+
+      - name: Lint CSS
+        run: |
+          # Continue even if no CSS files found
+          files=$(find . -name "*.css")
+          if [ -z "$files" ]; then
+            echo "No CSS files found, skipping CSS lint."
+          else
+            stylelint "**/*.css"
+          fi
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    runs-on: ubuntu-latest
+    needs: ci
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Deploy repository root (contains index.html)
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
