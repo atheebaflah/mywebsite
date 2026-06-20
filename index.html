@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adheeb Aflah — Computer Science undergraduate building RAG platforms, async data pipelines, and full-stack systems.">
     <title>Adheeb Aflah | Computer Scientist Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -10,7 +11,7 @@
 </head>
 <body class="bg-[#0f172a] text-slate-300 antialiased selection:bg-emerald-500/30 selection:text-emerald-400 relative overflow-x-hidden">
 
-    <canvas id="matrixCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none opacity-[0.03] z-0"></canvas>
+    <canvas id="matrixCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none opacity-70 z-0"></canvas>
 
     <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0f172a]/80 border-b border-slate-800/80 transition-all duration-300" id="navbar">
         <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -32,19 +33,19 @@
 
         <section id="about" class="pt-8 md:pt-24 space-y-6 min-h-[70vh] flex flex-col justify-center">
             <p class="code-font text-emerald-400 text-sm font-semibold tracking-wider opacity-0 hero-fade-in" style="animation-delay: 0.2s">01. Hello World, I am</p>
-            
+
             <h1 class="text-5xl md:text-7xl font-bold text-slate-100 tracking-tight dynamic-title">
-                Adheeb Aflah[cite: 1].
+                Adheeb Aflah
             </h1>
-            
+
             <h2 class="text-3xl md:text-5xl font-semibold text-slate-400 tracking-tight">
                 I build <span id="typewriter" class="text-emerald-400 border-r-2 border-emerald-400 pr-1 transition-all"></span>
             </h2>
-            
+
             <p class="max-w-xl text-slate-400 text-base md:text-lg leading-relaxed opacity-0 hero-fade-in" style="animation-delay: 0.6s">
-                Third-year Computer Science undergraduate at the <span class="text-slate-200 font-medium">Informatics Institute of Technology</span> (affiliated with the <span class="text-slate-200 font-medium">University of Westminster, UK</span>)[cite: 4]. I specialize in engineering high-performance software systems [cite: 5], leveraging asynchronous processing [cite: 5, 31], distributed data graphs [cite: 19, 20], and automated CI/CD infrastructures[cite: 5, 27].
+                Computer Science undergraduate at the <span class="text-slate-200 font-medium">Informatics Institute of Technology</span> (affiliated with the <span class="text-slate-200 font-medium">University of Westminster, UK</span>). I specialize in engineering high-performance software systems, leveraging asynchronous processing, distributed data graphs, and automated CI/CD infrastructure.
             </p>
-            
+
             <div class="pt-6 flex flex-wrap items-center gap-6 opacity-0 hero-fade-in" style="animation-delay: 0.8s">
                 <a href="#projects" class="code-font text-sm font-semibold text-[#0f172a] bg-emerald-400 hover:bg-emerald-300 px-6 py-3.5 rounded shadow-lg shadow-emerald-500/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-emerald-400/30">
                     Execute_Initialization()
@@ -73,7 +74,47 @@
                 </h2>
                 <div class="h-px bg-slate-800 flex-grow"></div>
             </div>
-    </section>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="skill-card bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group">
+                    <h3 class="code-font text-xs text-emerald-400 font-bold tracking-wider mb-4 uppercase">/ Languages</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fab fa-python text-emerald-500/70 w-4"></i> Python [cite: 11]</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-java text-amber-600/70 w-4"></i> Java [cite: 11]</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-js text-yellow-500/70 w-4"></i> JavaScript [cite: 11]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-code text-blue-400/70 w-4 text-xs"></i> TypeScript [cite: 11]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-database text-purple-400/70 w-4 text-xs"></i> SQL [cite: 11]</li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group">
+                    <h3 class="code-font text-xs text-emerald-400 font-bold tracking-wider mb-4 uppercase">/ Frameworks</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-bolt text-teal-400/70 w-4 text-xs"></i> FastAPI [cite: 12]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-seedling text-emerald-500/70 w-4 text-xs"></i> Spring Boot [cite: 12]</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-react text-sky-400/70 w-4"></i> React / Next.js [cite: 12]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-wind text-cyan-400/70 w-4 text-xs"></i> Tailwind CSS [cite: 12]</li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group">
+                    <h3 class="code-font text-xs text-emerald-400 font-bold tracking-wider mb-4 uppercase">/ Storage Engines</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-database text-blue-500/70 w-4 text-xs"></i> PostgreSQL [cite: 13]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-server text-cyan-600/70 w-4 text-xs"></i> MySQL [cite: 13]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-project-diagram text-red-400/70 w-4 text-xs"></i> Qdrant (Vector) [cite: 13]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-network-wired text-orange-400/70 w-4 text-xs"></i> Neo4j (Graph) [cite: 18]</li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group">
+                    <h3 class="code-font text-xs text-emerald-400 font-bold tracking-wider mb-4 uppercase">/ Infrastructure</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fab fa-docker text-sky-500/70 w-4"></i> Docker Compose [cite: 14, 27]</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-github text-slate-400 w-4"></i> GitHub Actions [cite: 14]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-cloud text-indigo-400/70 w-4 text-xs"></i> Supabase / Vercel [cite: 14]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-shield-alt text-amber-500/70 w-4 text-xs"></i> Cloudflare / Render [cite: 14, 22]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
         <section id="projects" class="space-y-8 scroll-mt-28 reveal">
             <div class="flex items-center space-x-4">
@@ -90,21 +131,22 @@
                         <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
                             <div>
                                 <span class="code-font text-[11px] text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">AI Knowledge Graph & Vector Space</span>
-                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">Nyaya [cite: 16]</h3>
-                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2025 - 2026 [cite: 17]</p>
+                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">Nyaya</h3>
+                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2025 - 2026</p>
                             </div>
                             <div class="flex space-x-4 text-slate-400 text-lg">
                                 <a href="https://github.com/atheebaflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Source Code"><i class="fab fa-github"></i></a>
-                                <a href="#" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Live System"><i class="fas fa-external-link-alt"></i></a>
+                                <!-- TODO: swap href for the live Nyaya URL once deployed, then remove link-pending class -->
+                                <span class="link-pending" title="Live demo coming soon"><i class="fas fa-external-link-alt"></i></span>
                             </div>
                         </div>
                         <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
-                            Advanced legal research platform designed specifically for Sri Lankan law students, orchestrating multi-database hybrid retrieval topologies[cite: 18, 19].
+                            Advanced legal research platform designed specifically for Sri Lankan law students, orchestrating multi-database hybrid retrieval.
                         </p>
                         <ul class="space-y-2.5 text-sm text-slate-400 mb-8 list-none pl-0">
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Developed a hybrid RAG citation engine combining Qdrant semantic vector search with Neo4j knowledge graph traversal for precedent relationship mapping[cite: 20].</li>
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Cut page interaction resolution times below sub-200ms using non-blocking asynchronous parallel query fetches[cite: 21].</li>
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Deployed secure administration systems and dynamic state controls using Supabase infrastructure[cite: 21].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Built a hybrid RAG citation engine combining Qdrant semantic vector search with Neo4j knowledge graph traversal for precedent relationship mapping.</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Cut query response times to under 200ms using non-blocking, asynchronous parallel data fetches.</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Built secure admin dashboards and dynamic state management on Supabase.</li>
                         </ul>
                     </div>
                     <div class="flex flex-wrap gap-2 text-xs code-font text-slate-400">
@@ -122,20 +164,20 @@
                         <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
                             <div>
                                 <span class="code-font text-[11px] text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">Enterprise Resource Architecture</span>
-                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">Employee Management System [cite: 23]</h3>
-                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2025 [cite: 30]</p>
+                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">Employee Management System</h3>
+                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2025</p>
                             </div>
                             <div class="flex space-x-4 text-slate-400 text-lg">
                                 <a href="https://github.com/atheebaflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Source Code"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
-                            Secure, enterprise-grade administrative platform engineered with strict relational hierarchies and continuous deployment matrices[cite: 24, 27].
+                            Secure, enterprise-grade administrative platform engineered with strict relational hierarchies and continuous deployment.
                         </p>
                         <ul class="space-y-2.5 text-sm text-slate-400 mb-8 list-none pl-0">
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Configured REST API servers using Spring Boot 3 paired with stateless JWT token authorization filters[cite: 24].</li>
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Built cyclical relational structures inside MySQL supporting self-referential department ownership lines safely[cite: 26].</li>
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Isolated structural nodes using Docker Compose and established automated integration pipelines via GitHub Actions[cite: 27].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Built REST API servers with Spring Boot 3, secured by stateless JWT token authorization filters.</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Modeled self-referential department hierarchies in MySQL without breaking referential integrity.</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Containerized services with Docker Compose and automated integration testing via GitHub Actions.</li>
                         </ul>
                     </div>
                     <div class="flex flex-wrap gap-2 text-xs code-font text-slate-400">
@@ -153,20 +195,20 @@
                         <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
                             <div>
                                 <span class="code-font text-[11px] text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">Concurrent Data Engineering</span>
-                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">YC Startup Explorer [cite: 28]</h3>
-                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2026 [cite: 29]</p>
+                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">YC Startup Explorer</h3>
+                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2026</p>
                             </div>
                             <div class="flex space-x-4 text-slate-400 text-lg">
                                 <a href="https://github.com/atheebaflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Source Code"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
-                            High-throughput asynchronous scraping engine deployed to parse, extract, and index dense semi-structured datasets efficiently[cite: 31, 32].
+                            High-throughput asynchronous scraping engine that parses, deduplicates, and indexes semi-structured startup data at scale.
                         </p>
                         <ul class="space-y-2.5 text-sm text-slate-400 mb-8 list-none pl-0">
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Implemented Python `asyncio` and `aiohttp` routine matrices to scrape 500+ YC targets concurrently[cite: 31].</li>
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Reduced cumulative HTTP request latency barriers by 60% compared to typical block cycles[cite: 31].</li>
-                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Exposed fast, indexed paginated payloads from PostgreSQL through optimized FastAPI endpoints[cite: 32].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Used Python <code class="code-font text-emerald-400/90">asyncio</code> and <code class="code-font text-emerald-400/90">aiohttp</code> to concurrently scrape 500+ YC startup profiles.</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Cut cumulative request latency by 60% versus a sequential, blocking baseline.</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Served fast, paginated results from PostgreSQL through optimized FastAPI endpoints.</li>
                         </ul>
                     </div>
                     <div class="flex flex-wrap gap-2 text-xs code-font text-slate-400">
@@ -174,6 +216,37 @@
                         <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">FastAPI</span>
                         <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">PostgreSQL</span>
                         <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">React</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-slate-900/30 border border-slate-800/90 rounded-xl p-6 md:p-8 hover:border-slate-700/80 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden" data-tilt>
+                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-400 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origins-top"></div>
+                    <div>
+                        <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                            <div>
+                                <span class="code-font text-[11px] text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">Java EE Backend & Systems Migration</span>
+                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">Smart Campus Sensor & Room API</h3>
+                                <p class="text-xs text-slate-500 code-font mt-1">University Coursework</p>
+                            </div>
+                            <div class="flex space-x-4 text-slate-400 text-lg">
+                                <a href="https://github.com/atheebaflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+                            Backend REST API for managing campus sensor data and room resources, built under a hard coursework deadline.
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-400 mb-8 list-none pl-0">
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Built a JAX-RS (Jersey) REST API deployed on Apache Tomcat 9 to expose sensor and room management endpoints.</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Diagnosed a javax → jakarta namespace conflict mid-deadline and executed a full migration from Jersey 3.x to 2.x to restore compatibility with the Tomcat 9 servlet container.</li>
+                            <!-- TODO: replace with your real third point — what did the endpoints actually do? (CRUD scope, auth, data store, sensor types, etc.) -->
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Designed resource endpoints following REST conventions for sensor readings and room data.</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs code-font text-slate-400">
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Java</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">JAX-RS / Jersey</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Tomcat 9</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">REST API</span>
                     </div>
                 </div>
             </div>
@@ -191,23 +264,23 @@
                 <div class="bg-slate-900/20 border border-slate-800/60 rounded-xl p-6 hover:bg-slate-900/40 transition-all duration-300">
                     <div class="flex items-center space-x-3 mb-2">
                         <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400"></div>
-                        <h3 class="text-lg font-semibold text-slate-200">IEEE Student Branch [cite: 35]</h3>
+                        <h3 class="text-lg font-semibold text-slate-200">IEEE Student Branch</h3>
                     </div>
-                    <p class="text-xs code-font text-emerald-400/80 font-medium tracking-wide mb-4">ACTIVE MEMBER / COMPETITOR | IIT CAMPUS (2024 - PRESENT) [cite: 36, 37]</p>
+                    <p class="text-xs code-font text-emerald-400/80 font-medium tracking-wide mb-4">ACTIVE MEMBER / COMPETITOR | IIT CAMPUS (2024 – PRESENT)</p>
                     <ul class="space-y-3 text-sm text-slate-400 pl-0">
-                        <li class="relative pl-4"><span class="absolute left-0 text-emerald-500">▹</span> <strong>IEEE Xtreme 18.0 & 19.0:</strong> Deployed inside global 24-hour mathematical execution brackets resolving tough algorithmic optimization workloads under restrictive timeouts[cite: 38].</li>
-                        <li class="relative pl-4"><span class="absolute left-0 text-emerald-500">▹</span> <strong>IEEE Haxmas Challenge:</strong> Fast script compilation, rapid codebase stabilization, and optimization challenges[cite: 39].</li>
+                        <li class="relative pl-4"><span class="absolute left-0 text-emerald-500">▹</span> <strong>IEEE Xtreme 18.0 & 19.0:</strong> Competed in the global 24-hour programming contest, solving algorithmic optimization problems under hard time constraints.</li>
+                        <li class="relative pl-4"><span class="absolute left-0 text-emerald-500">▹</span> <strong>IEEE Haxmas Challenge:</strong> Rapid prototyping and codebase stabilization under hackathon time pressure.</li>
                     </ul>
                 </div>
 
                 <div class="bg-slate-900/20 border border-slate-800/60 rounded-xl p-6 hover:bg-slate-900/40 transition-all duration-300">
                     <div class="flex items-center space-x-3 mb-2">
                         <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400"></div>
-                        <h3 class="text-lg font-semibold text-slate-200">Student Union Deployment [cite: 41]</h3>
+                        <h3 class="text-lg font-semibold text-slate-200">Student Union</h3>
                     </div>
-                    <p class="text-xs code-font text-emerald-400/80 font-medium tracking-wide mb-4">VOLUNTEER CORE | IIT CAMPUS (2024 - PRESENT) [cite: 42, 43]</p>
+                    <p class="text-xs code-font text-emerald-400/80 font-medium tracking-wide mb-4">VOLUNTEER CORE | IIT CAMPUS (2024 – PRESENT)</p>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        Partnered directly with campus leadership groups to plan, structure, and deploy large-scale community tech events[cite: 44]. Managed underlying logistics and systemic organizational pipelines to scale inner student cross-collaboration loops[cite: 44].
+                        Partnered with campus leadership to plan and run large-scale student tech events, handling logistics and cross-team coordination.
                     </p>
                 </div>
             </div>
@@ -217,7 +290,7 @@
             <p class="code-font text-emerald-400 text-sm font-semibold tracking-wider">05. Terminal Connection</p>
             <h2 class="text-4xl font-bold text-slate-100 tracking-tight">Initialize Handshake</h2>
             <p class="text-slate-400 text-sm md:text-base leading-relaxed">
-                I am actively seeking software engineering internships, system research collaborations, and deep full-stack architecture development vectors. Drop an execution signal.
+                I am actively seeking software engineering internships, systems research collaborations, and full-stack architecture work. Drop a line.
             </p>
             <div class="pt-6">
                 <a href="mailto:atheebaflah5772fx@gmail.com" class="code-font relative inline-block text-sm font-semibold text-emerald-400 border border-emerald-400/40 hover:bg-emerald-400/10 px-8 py-4 rounded transition-all duration-300 overflow-hidden group">
@@ -230,7 +303,11 @@
     </main>
 
     <footer class="border-t border-slate-900 bg-[#0b1222] py-8 text-center text-xs code-font text-slate-500 relative z-10">
-        <p>© 2026 Adheeb Aflah. Automated Production System Infrastructure.</p>
+        <p>© 2026 Adheeb Aflah.</p>
+        <p class="mt-3 flex items-center justify-center gap-2 text-slate-600">
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span id="systemClock"></span>
+        </p>
     </footer>
 
     <script src="script.js"></script>

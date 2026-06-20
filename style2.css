@@ -50,3 +50,57 @@
         transform: translateY(0);
     }
 }
+
+/* Typewriter caret blink */
+#typewriter {
+    border-right-color: #10b981;
+    animation: blinkCaret 0.9s step-end infinite;
+}
+@keyframes blinkCaret {
+    0%, 100% { border-right-color: #10b981; }
+    50% { border-right-color: transparent; }
+}
+
+/* Project card tilt needs perspective on the parent */
+.project-card[data-tilt] {
+    transition: transform 0.15s ease-out, border-color 0.5s, background-color 0.5s;
+    will-change: transform;
+}
+
+/* Sticky navbar gains weight once the page scrolls */
+#navbar.is-scrolled {
+    background-color: rgba(15, 23, 42, 0.92);
+    box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Visible keyboard focus, brand-colored */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* A link that exists but isn't live yet, e.g. a project with no deployed URL */
+.link-pending {
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .hero-fade-in,
+    .project-card,
+    #typewriter {
+        transition: none !important;
+        animation: none !important;
+    }
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+    .hero-fade-in {
+        opacity: 1;
+    }
+}
