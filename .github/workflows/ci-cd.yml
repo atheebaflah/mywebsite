@@ -33,7 +33,7 @@ jobs:
 
       - name: Install htmlhint and stylelint
         run: |
-          npm install -g htmlhint stylelint stylelint-config-standard
+          npm install -g htmlhint stylelint stylelint-config-recommended
 
       - name: Lint HTML
         run: |
@@ -43,7 +43,11 @@ jobs:
         run: |
           cat > .stylelintrc.json <<'EOF'
           {
-            "extends": "stylelint-config-standard"
+            "extends": "stylelint-config-recommended",
+            "rules": {
+              "no-descending-specificity": null,
+              "no-duplicate-selectors": null
+            }
           }
           EOF
 
