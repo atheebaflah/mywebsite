@@ -1,313 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Creative Developer</title>
+    <title>Adheeb Aflah | Computer Scientist Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
-
 </head>
+<body class="bg-[#0f172a] text-slate-300 antialiased selection:bg-emerald-500/30 selection:text-emerald-400 relative overflow-x-hidden">
 
-<body>
+    <canvas id="matrixCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none opacity-[0.03] z-0"></canvas>
 
-    <div id="loader-wrapper">
-        <div class="loader-ring"></div>
-        <div class="loading-text">INITIALIZING...</div>
-    </div>
-
-    <nav class="hidden hidden-top">
-        <div class="logo gradient-text">Adheeb Aflah</div>
-        <div class="nav-links">
-            <!-- <a href="">MyCV</a> -->
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0f172a]/80 border-b border-slate-800/80 transition-all duration-300" id="navbar">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="code-font text-emerald-400 font-bold text-xl tracking-tighter glitch-hover">&lt;AA /&gt;</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link relative hover:text-emerald-400 transition-colors py-2">_about</a>
+                <a href="#skills" class="nav-link relative hover:text-emerald-400 transition-colors py-2">_skills</a>
+                <a href="#projects" class="nav-link relative hover:text-emerald-400 transition-colors py-2">_projects</a>
+                <a href="#experience" class="nav-link relative hover:text-emerald-400 transition-colors py-2">_experience</a>
+                <a href="#contact" class="nav-link relative hover:text-emerald-400 transition-colors py-2 text-emerald-400 border border-emerald-400/20 px-4 py-1.5 rounded bg-emerald-500/5 hover:bg-emerald-500/10 transition-all duration-300">Ping()</a>
+            </nav>
+            <div class="md:hidden">
+                <a href="#contact" class="code-font text-xs text-emerald-400 border border-emerald-400/30 rounded px-3 py-1.5 hover:bg-emerald-400/10 transition-all">Ping()</a>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <section id="hero" class="container">
-        <p class="hero-intro hidden hidden-left">Hi, my name is</p>
-        <h1 class="hero-name hidden hidden-left gradient-text">Adheeb Developer.</h1>
-        <h2 class="hero-desc hidden hidden-left">I build bright digital experiences.</h2>
-        <p class="hero-text hidden hidden-left" style="transition-delay: 200ms;">
-            Tech enthusiast and Computer Science student. I am on a journey to master the logic behind the screen,
-            constantly learning new technologies and looking for the next challenge to solve </p>
-        <div class="hidden hidden-bottom" style="transition-delay: 400ms;">
-            <a href="#projects" class="btn">See My Work</a>
-        </div>
-    </section>
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-36 relative z-10">
 
-    <section id="about" class="container">
-        <h2 class="section-title hidden hidden-left">About Me</h2>
-        <div class="about-grid">
-            <div class="about-text hidden hidden-left">
-                <p>I’m a Computer Science student passionate about creating efficient, well-designed software solutions.
-                    I enjoy writing clean, maintainable code and building applications that are both functional and
-                    engaging. I am continuously exploring new technologies and areas of computer science to expand my
-                    skills and find the path where I can make the greatest impact</p>
-                <div class="about-content">
-                    <br>
-                    <h3><p class="fw-bold">Feel free to grab a copy of my resume.....</p></h3>
-                    <br>
-                    <a href="adheeb CV.pdf" download class="btn btn-primary">
-                        <i class="fas fa-download"></i> Download CV
+        <section id="about" class="pt-8 md:pt-24 space-y-6 min-h-[70vh] flex flex-col justify-center">
+            <p class="code-font text-emerald-400 text-sm font-semibold tracking-wider opacity-0 hero-fade-in" style="animation-delay: 0.2s">01. Hello World, I am</p>
+            
+            <h1 class="text-5xl md:text-7xl font-bold text-slate-100 tracking-tight dynamic-title">
+                Adheeb Aflah[cite: 1].
+            </h1>
+            
+            <h2 class="text-3xl md:text-5xl font-semibold text-slate-400 tracking-tight">
+                I build <span id="typewriter" class="text-emerald-400 border-r-2 border-emerald-400 pr-1 transition-all"></span>
+            </h2>
+            
+            <p class="max-w-xl text-slate-400 text-base md:text-lg leading-relaxed opacity-0 hero-fade-in" style="animation-delay: 0.6s">
+                Third-year Computer Science undergraduate at the <span class="text-slate-200 font-medium">Informatics Institute of Technology</span> (affiliated with the <span class="text-slate-200 font-medium">University of Westminster, UK</span>)[cite: 4]. I specialize in engineering high-performance software systems [cite: 5], leveraging asynchronous processing [cite: 5, 31], distributed data graphs [cite: 19, 20], and automated CI/CD infrastructures[cite: 5, 27].
+            </p>
+            
+            <div class="pt-6 flex flex-wrap items-center gap-6 opacity-0 hero-fade-in" style="animation-delay: 0.8s">
+                <a href="#projects" class="code-font text-sm font-semibold text-[#0f172a] bg-emerald-400 hover:bg-emerald-300 px-6 py-3.5 rounded shadow-lg shadow-emerald-500/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-emerald-400/30">
+                    Execute_Initialization()
+                </a>
+                <div class="flex items-center space-x-6 text-xl text-slate-400">
+                    <a href="https://github.com/atheebaflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-all duration-300 transform hover:-translate-y-1" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/adheeb-aflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-all duration-300 transform hover:-translate-y-1" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:atheebaflah5772fx@gmail.com" class="hover:text-emerald-400 transition-all duration-300 transform hover:-translate-y-1" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+94769211624" class="hover:text-emerald-400 transition-all duration-300 transform hover:-translate-y-1" title="Phone">
+                        <i class="fas fa-phone"></i>
                     </a>
                 </div>
             </div>
+        </section>
 
-            <div class="about-img-wrapper hidden-right">
-                <div class="img-frame">
-                    <img src="Adheebprofile.jpeg" alt="Adheeb's Professional Profile" class="profile-img">
+        <section id="skills" class="space-y-8 scroll-mt-28 reveal">
+            <div class="flex items-center space-x-4">
+                <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-3">
+                    <span class="code-font text-emerald-400 text-lg font-normal">02.</span> Core Engine
+                </h2>
+                <div class="h-px bg-slate-800 flex-grow"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="skill-card bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group">
+                    <h3 class="code-font text-xs text-emerald-400 font-bold tracking-wider mb-4 uppercase">/ Languages</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fab fa-python text-emerald-500/70 w-4"></i> Python [cite: 11]</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-java text-amber-600/70 w-4"></i> Java [cite: 11]</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-js text-yellow-500/70 w-4"></i> JavaScript [cite: 11]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-code text-blue-400/70 w-4 text-xs"></i> TypeScript [cite: 11]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-database text-purple-400/70 w-4 text-xs"></i> SQL [cite: 11]</li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group">
+                    <h3 class="code-font text-xs text-emerald-400 font-bold tracking-wider mb-4 uppercase">/ Frameworks</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-bolt text-teal-400/70 w-4 text-xs"></i> FastAPI [cite: 12]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-seedling text-emerald-500/70 w-4 text-xs"></i> Spring Boot [cite: 12]</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-react text-sky-400/70 w-4"></i> React / Next.js [cite: 12]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-wind text-cyan-400/70 w-4 text-xs"></i> Tailwind CSS [cite: 12]</li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group">
+                    <h3 class="code-font text-xs text-emerald-400 font-bold tracking-wider mb-4 uppercase">/ Storage Engines</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-database text-blue-500/70 w-4 text-xs"></i> PostgreSQL [cite: 13]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-server text-cyan-600/70 w-4 text-xs"></i> MySQL [cite: 13]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-project-diagram text-red-400/70 w-4 text-xs"></i> Qdrant (Vector) [cite: 13]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-network-wired text-orange-400/70 w-4 text-xs"></i> Neo4j (Graph) [cite: 18]</li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-slate-900/40 border border-slate-800/80 p-6 rounded-xl hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group">
+                    <h3 class="code-font text-xs text-emerald-400 font-bold tracking-wider mb-4 uppercase">/ Infrastructure</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fab fa-docker text-sky-500/70 w-4"></i> Docker Compose [cite: 14, 27]</li>
+                        <li class="flex items-center gap-2"><i class="fab fa-github text-slate-400 w-4"></i> GitHub Actions [cite: 14]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-cloud text-indigo-400/70 w-4 text-xs"></i> Supabase / Vercel [cite: 14]</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-shield-alt text-amber-500/70 w-4 text-xs"></i> Cloudflare / Render [cite: 14, 22]</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
-    <section id="skills">
-        <div class="container">
-            <div class="d-flex align-items-center mb-5 hidden hidden-left">
-                <h2 class="section-title hidden hidden-left"> Technical Skills</h2>
-                <div style="height: 1px; background: #233554; width: 300px;"></div>
+        </section>
+
+        <section id="projects" class="space-y-8 scroll-mt-28 reveal">
+            <div class="flex items-center space-x-4">
+                <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-3">
+                    <span class="code-font text-emerald-400 text-lg font-normal">03.</span> Compiled Repositories
+                </h2>
+                <div class="h-px bg-slate-800 flex-grow"></div>
             </div>
 
-            <div class="row g-4">
-
-                <div class="col-md-6 col-lg-3 hidden hidden-bottom">
-                    <div class="skill-category-card">
-                        <div class="skill-header">
-                            <i class="fa-solid fa-code"></i>
-                            <span class="fw-bold">Languages</span>
+            <div class="grid grid-cols-1 gap-8">
+                <div class="project-card bg-slate-900/30 border border-slate-800/90 rounded-xl p-6 md:p-8 hover:border-slate-700/80 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden" data-tilt>
+                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-400 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origins-top"></div>
+                    <div>
+                        <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                            <div>
+                                <span class="code-font text-[11px] text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">AI Knowledge Graph & Vector Space</span>
+                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">Nyaya [cite: 16]</h3>
+                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2025 - 2026 [cite: 17]</p>
+                            </div>
+                            <div class="flex space-x-4 text-slate-400 text-lg">
+                                <a href="https://github.com/atheebaflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Source Code"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Live System"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
-                        <div>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
+                        <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+                            Advanced legal research platform designed specifically for Sri Lankan law students, orchestrating multi-database hybrid retrieval topologies[cite: 18, 19].
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-400 mb-8 list-none pl-0">
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Developed a hybrid RAG citation engine combining Qdrant semantic vector search with Neo4j knowledge graph traversal for precedent relationship mapping[cite: 20].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Cut page interaction resolution times below sub-200ms using non-blocking asynchronous parallel query fetches[cite: 21].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Deployed secure administration systems and dynamic state controls using Supabase infrastructure[cite: 21].</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs code-font text-slate-400">
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Next.js</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">FastAPI</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Qdrant</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Neo4j</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Supabase</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-slate-900/30 border border-slate-800/90 rounded-xl p-6 md:p-8 hover:border-slate-700/80 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden" data-tilt>
+                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-400 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origins-top"></div>
+                    <div>
+                        <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                            <div>
+                                <span class="code-font text-[11px] text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">Enterprise Resource Architecture</span>
+                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">Employee Management System [cite: 23]</h3>
+                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2025 [cite: 30]</p>
+                            </div>
+                            <div class="flex space-x-4 text-slate-400 text-lg">
+                                <a href="https://github.com/atheebaflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
+                        <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+                            Secure, enterprise-grade administrative platform engineered with strict relational hierarchies and continuous deployment matrices[cite: 24, 27].
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-400 mb-8 list-none pl-0">
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Configured REST API servers using Spring Boot 3 paired with stateless JWT token authorization filters[cite: 24].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Built cyclical relational structures inside MySQL supporting self-referential department ownership lines safely[cite: 26].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Isolated structural nodes using Docker Compose and established automated integration pipelines via GitHub Actions[cite: 27].</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs code-font text-slate-400">
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Spring Boot 3</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">React</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">MySQL</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Docker</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">CI/CD</span>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 hidden hidden-bottom" style="transition-delay: 100ms;">
-                    <div class="skill-category-card">
-                        <div class="skill-header">
-                            <i class="fa-solid fa-laptop-code"></i>
-                            <span class="fw-bold">Frontend</span>
+                <div class="project-card bg-slate-900/30 border border-slate-800/90 rounded-xl p-6 md:p-8 hover:border-slate-700/80 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden" data-tilt>
+                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-400 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origins-top"></div>
+                    <div>
+                        <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                            <div>
+                                <span class="code-font text-[11px] text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">Concurrent Data Engineering</span>
+                                <h3 class="text-2xl font-bold text-slate-100 mt-2 tracking-tight group-hover:text-emerald-400 transition-colors duration-300">YC Startup Explorer [cite: 28]</h3>
+                                <p class="text-xs text-slate-500 code-font mt-1">Production Stage: 2026 [cite: 29]</p>
+                            </div>
+                            <div class="flex space-x-4 text-slate-400 text-lg">
+                                <a href="https://github.com/atheebaflah" target="_blank" rel="noreferrer" class="hover:text-emerald-400 transition-colors duration-300" title="Source Code"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
-                        <div>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Redux</span>
-                            <span class="skill-tag">Tailwind CSS</span>
-                            <span class="skill-tag">Bootstrap 5</span>
-                            <span class="skill-tag">SASS/SCSS</span>
-                        </div>
+                        <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+                            High-throughput asynchronous scraping engine deployed to parse, extract, and index dense semi-structured datasets efficiently[cite: 31, 32].
+                        </p>
+                        <ul class="space-y-2.5 text-sm text-slate-400 mb-8 list-none pl-0">
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Implemented Python `asyncio` and `aiohttp` routine matrices to scrape 500+ YC targets concurrently[cite: 31].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Reduced cumulative HTTP request latency barriers by 60% compared to typical block cycles[cite: 31].</li>
+                            <li class="relative pl-5"><span class="absolute left-0 text-emerald-400 font-bold">✓</span> Exposed fast, indexed paginated payloads from PostgreSQL through optimized FastAPI endpoints[cite: 32].</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs code-font text-slate-400">
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">Python Asyncio</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">FastAPI</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">PostgreSQL</span>
+                        <span class="bg-slate-950/80 px-3 py-1 rounded border border-slate-800/60">React</span>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3 hidden hidden-bottom" style="transition-delay: 200ms;">
-                    <div class="skill-category-card">
-                        <div class="skill-header">
-                            <i class="fa-solid fa-server"></i>
-                            <span class="fw-bold">Backend</span>
-                        </div>
-                        <div>
-
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 hidden hidden-bottom" style="transition-delay: 300ms;">
-                    <div class="skill-category-card">
-                        <div class="skill-header">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                            <span class="fw-bold">Tools</span>
-                        </div>
-                        <div>
-                            <span class="skill-tag">Git & GitHub</span>
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">Figma</span>
-                            <span class="skill-tag">VS Code / IDEs</span>
-                            <span class="skill-tag">IntelliJ</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="container">
-        <h2 class="section-title hidden hidden-left">Some Things I've Built</h2>
-        <div class="project-grid">
-
-            <div class="project-card hidden hidden-bottom">
-                <div class="card-top">
-                    <i class="fa-regular fa-folder-open folder-icon"></i>
-                    <div class="project-links">
-                        <a href="https://github.com/atheebaflah/simple-java-flight-seat-booking" target="_blank"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <h3 class="project-title gradient-text">Flight seat booking</h3>
-                <p class="project-desc">A simple java application for booking flight seats.</p>
-                <div class="project-tech"><span>Java</span></div>
+        <section id="experience" class="space-y-8 scroll-mt-28 reveal">
+            <div class="flex items-center space-x-4">
+                <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-3">
+                    <span class="code-font text-emerald-400 text-lg font-normal">04.</span> Network Nodes & Algorithmic Runtimes
+                </h2>
+                <div class="h-px bg-slate-800 flex-grow"></div>
             </div>
 
-            <div class="project-card hidden hidden-bottom">
-                <div class="card-top">
-                    <i class="fa-regular fa-folder-open folder-icon"></i>
-                    <div class="project-links">
-                        <a href="https://github.com/atheebaflah/Realestate-main" target="_blank"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-900/20 border border-slate-800/60 rounded-xl p-6 hover:bg-slate-900/40 transition-all duration-300">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400"></div>
+                        <h3 class="text-lg font-semibold text-slate-200">IEEE Student Branch [cite: 35]</h3>
                     </div>
+                    <p class="text-xs code-font text-emerald-400/80 font-medium tracking-wide mb-4">ACTIVE MEMBER / COMPETITOR | IIT CAMPUS (2024 - PRESENT) [cite: 36, 37]</p>
+                    <ul class="space-y-3 text-sm text-slate-400 pl-0">
+                        <li class="relative pl-4"><span class="absolute left-0 text-emerald-500">▹</span> <strong>IEEE Xtreme 18.0 & 19.0:</strong> Deployed inside global 24-hour mathematical execution brackets resolving tough algorithmic optimization workloads under restrictive timeouts[cite: 38].</li>
+                        <li class="relative pl-4"><span class="absolute left-0 text-emerald-500">▹</span> <strong>IEEE Haxmas Challenge:</strong> Fast script compilation, rapid codebase stabilization, and optimization challenges[cite: 39].</li>
+                    </ul>
                 </div>
-                <h3 class="project-title gradient-text">Realestate-main</h3>
-                <p class="project-desc">A responsive React JS Single Page Application (SPA) for an Estate Agent
-                    platform. Features include advanced property search, drag-and-drop favorites, and tabbed property
-                    details
 
-                    .</p>
-                <div class="project-tech"><span>React</span><span>JavaScript</span></div>
-            </div>
-
-            <div class="project-card hidden hidden-bottom">
-                <div class="card-top">
-                    <i class="fa-regular fa-folder-open folder-icon"></i>
-                    <div class="project-links">
-                        <a href="https://github.com/atheebaflah/A-simple-ecom-page" target="_blank"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
+                <div class="bg-slate-900/20 border border-slate-800/60 rounded-xl p-6 hover:bg-slate-900/40 transition-all duration-300">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400"></div>
+                        <h3 class="text-lg font-semibold text-slate-200">Student Union Deployment [cite: 41]</h3>
                     </div>
+                    <p class="text-xs code-font text-emerald-400/80 font-medium tracking-wide mb-4">VOLUNTEER CORE | IIT CAMPUS (2024 - PRESENT) [cite: 42, 43]</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Partnered directly with campus leadership groups to plan, structure, and deploy large-scale community tech events[cite: 44]. Managed underlying logistics and systemic organizational pipelines to scale inner student cross-collaboration loops[cite: 44].
+                    </p>
                 </div>
-                <h3 class="project-title gradient-text">Simple ecom page</h3>
-                <p class="project-desc">this page designed HTML CSS JS</p>
-                <div class="project-tech"><span>CSS</span><span>JavaScript</span></div>
             </div>
-            <div class="project-card hidden hidden-bottom">
-                <div class="card-top">
-                    <i class="fa-regular fa-folder-open folder-icon"></i>
-                    <div class="project-links">
-                        <a href="https://github.com/atheebaflah/Life4Land-Sustainability-Platform" target="_blank"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <h3 class="project-title gradient-text">Life4Land Sustainability Platform</h3>
-                <p class="project-desc">RA basic responsive web platform dedicated to environmental awareness and
-                    volunteering. Features a video splash screen, interactive program listings, a JavaScript-based
-                    rating system, and educational content on forest conservation</p>
+        </section>
+
+        <section id="contact" class="text-center max-w-xl mx-auto space-y-6 py-12 scroll-mt-28 reveal">
+            <p class="code-font text-emerald-400 text-sm font-semibold tracking-wider">05. Terminal Connection</p>
+            <h2 class="text-4xl font-bold text-slate-100 tracking-tight">Initialize Handshake</h2>
+            <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                I am actively seeking software engineering internships, system research collaborations, and deep full-stack architecture development vectors. Drop an execution signal.
+            </p>
+            <div class="pt-6">
+                <a href="mailto:atheebaflah5772fx@gmail.com" class="code-font relative inline-block text-sm font-semibold text-emerald-400 border border-emerald-400/40 hover:bg-emerald-400/10 px-8 py-4 rounded transition-all duration-300 overflow-hidden group">
+                    <span class="relative z-10">Establish_Secure_Session()</span>
+                    <span class="absolute inset-0 bg-emerald-400/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+                </a>
             </div>
-            <div class="project-card hidden hidden-bottom">
-                <div class="card-top">
-                    <i class="fa-regular fa-folder-open folder-icon"></i>
-                    <div class="project-links">
-                        <a href="https://github.com/atheebaflah/Traffic-Survey-Data-Analyzer" target="_blank"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <h3 class="project-title gradient-text">Traffic Survey Data Analyzer</h3>
-                <p class="project-desc">A console-based traffic data analysis program that processes daily traffic
-                    survey files and generates statistical insights on vehicle types, traffic flow, speed compliance,
-                    and peak hour</p>
-                <div class="project-tech"><span>python</span><span>pandas</span></div>
-            </div>
-            <div class="project-card hidden hidden-bottom">
-                <div class="card-top">
-                    <i class="fa-regular fa-folder-open folder-icon"></i>
-                    <div class="project-links">
-                        <a href="https://github.com/atheebaflah/travel-agency-landing-page" target="_blank"><i
-                                class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <h3 class="project-title gradient-text">Travel Agency Landing Page</h3>
-                <p class="project-desc">A fully responsive, front-end travel agency landing page designed with semantic
-                    HTML5 and modern CSS3, featuring advanced animations and a mobile-first layout.</p>
-                <div class="project-tech"><span>HTML5</span><span>CSS3</span></div>
-            </div>
-            <div class="project-card hidden hidden-bottom">
-                <div class="card-top">
-                    <i class="fa-regular fa-folder-open folder-icon"></i>
-                    <div class="project-links">
-                        <a href="https://github.com/atheebaflah/python-selenium-yc-scraper/blob/main/scraper.py"
-                            target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <h3 class="project-title gradient-text">python-selenium-yc-scraper</h3>
-                <p class="project-desc">A robust Python scraper built with Selenium and BeautifulSoup to extract
-                    detailed data (Founders, Batches, LinkedIn URLs) from 500+ Y Combinator startups. Developed for the
-                    Zyner SE Intern Assessmen</p>
-                <div class="project-tech"><span>Python</span><span>Selenium</span><span>BeautifulSoup</span></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="container">
-        <h2 class="section-title hidden hidden-bottom" style="justify-content: center;">What's Next?</h2>
-        <h1 class="contact-title gradient-text hidden hidden-bottom">Get In Touch</h1>
-        <p class="hero-text hidden hidden-bottom" style="margin: 0 auto 40px auto; text-align: center;">
-            I am currently looking for new opportunities. Whether you have a question, a project idea, or just want to
-            say hi, my inbox is open!
-        </p>
+    </main>
 
-        <div class="contact-buttons hidden hidden-bottom">
-            <a href="mailto:your.email@example.com" class="btn">Say Hello</a>
-
-            <a href="tel:+94769211624" class="phone-link">
-                <i class="fa-solid fa-phone"></i> +94 76 9211624
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <p>Designed & Built by <span class="gradient-text">Alex Developer</span></p>
-
-        <div class="social-links">
-            <a href="https://github.com/atheebaflah" target="_blank" title="GitHub"><i
-                    class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/adheeb-aflah-a67038309/" target="_blank" title="LinkedIn"><i
-                    class="fa-brands fa-linkedin"></i></a>
-            <a href="https://instagram.com/ade6.a" target="_blank" title="Instagram"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/adheeb.aflah/" target="_blank" title="Facebook"><i
-                    class="fa-brands fa-facebook"></i></a>
-        </div>
-
+    <footer class="border-t border-slate-900 bg-[#0b1222] py-8 text-center text-xs code-font text-slate-500 relative z-10">
+        <p>© 2026 Adheeb Aflah. Automated Production System Infrastructure.</p>
     </footer>
 
-    <script>
-        // Loader
-        window.addEventListener('load', () => {
-            const loaderWrapper = document.getElementById('loader-wrapper');
-            setTimeout(() => {
-                loaderWrapper.classList.add('loaded');
-                document.body.style.overflowY = 'auto';
-            }, 1000);
-        });
-
-        // Animations
-        const observerOptions = { root: null, threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) { entry.target.classList.add('show'); }
-            });
-        }, observerOptions);
-
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((el) => observer.observe(el));
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
